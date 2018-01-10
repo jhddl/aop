@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- <bean id="phone" class="com.qf.pojo.po.Phone">
+		<property name="id" value="10"></property>
+		<property name="name" value="iphone x"></property>
+	</bean>
+
+	<bean id="student" class="com.qf.pojo.po.Student">
+		<property name="id" value="456" />
+		<property name="name" value="miliuzhang" />
+		<property name="phone" ref="phone"></property>
+	</bean> -->
+	<!-- <bean id="personFactory" class="com.qf.pojo.factory.PersonFactory" 
+		factory-method="creatStudent"/> -->
+	<bean id="phone" class="com.qf.pojo.po.Phone"  p:id="17"  p:name="小米6"></bean>
+	<bean id="student" class="com.qf.pojo.po.Student" >
+		<constructor-arg name="id" value="15"></constructor-arg>
+		<constructor-arg name="name" value="小王"></constructor-arg>
+		<constructor-arg name="phone" ref="phone"></constructor-arg>
+	</bean>
+</beans>
